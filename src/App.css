@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  list-style-type: none;
+}
+.tast-tracker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+}
+.title {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+.enter-btn {
+  background: url(../src/assets/image/enter.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  left: 83%;
+}
+.input-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .task-input {
+    width: 100%;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+}
+
+/* From Uiverse.io by MhrrmliEltac */
+.clear {
+  clear: both;
+}
+
+.checkBox {
+  display: block;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 3px solid black;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 2px #fff;
+}
+
+.checkBox div {
+  width: 60px;
+  height: 60px;
+  background-color: #c9c9c9;
+  top: -52px;
+  left: -52px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  z-index: 100;
+}
+
+.checkBox input[type="checkbox"]:checked + div {
+  left: -10px;
+  top: -10px;
+}
+
+.checkBox input[type="checkbox"] {
+  position: absolute;
+  left: 50px;
+  visibility: hidden;
+}
+
+.transition {
+  transition: 300ms ease;
+}
+
+.text-decoration {
+  text-decoration: 2px line-through black;
+  color: #5c5a5a;
+}
+
+.tasks {
+  margin-top: 1.2rem;
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #5c5a5a;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    .left-list {
+      display: flex;
+      align-items: center;
+      .task-text {
+        margin-left: 10px;
+      }
+    }
+    .delete-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      .delete-icon {
+        font-size: 1.2rem;
+      }
+    }
+    .edit-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      .edit-icon {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+input[type="checkbox"]:disabled + .transition {
+  background-color: #4caf50;
+}
+
+input[type="checkbox"]:disabled + .transition.background-color {
+  background-color: #f44336;
+}
